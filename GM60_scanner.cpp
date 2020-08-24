@@ -148,3 +148,12 @@ void GM60_scanner::set_sleep_mode(uint8_t sleep_mode){
 
 }
 
+String GM60_scanner::get_info(){
+  String s = "";
+  if (mySerial->available() > 0) {
+    while (mySerial->available()) {
+      s = s + char(mySerial->read());
+    }
+  }
+  return s;
+}
