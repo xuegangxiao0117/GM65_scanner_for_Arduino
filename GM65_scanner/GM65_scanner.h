@@ -28,7 +28,7 @@ struct retVal
 
 
 
-class GM60_scanner {
+class GM65_scanner {
   char read_reg[9] = {0x7E, 0x00, 0x07, 0x01, 0x00, 0x00, 0x01, 0xAB, 0xCD};
 
   private:
@@ -39,10 +39,10 @@ class GM60_scanner {
 
   public:
 
-    GM60_scanner(Stream * serial);
+    GM65_scanner(Stream * serial);
 
     /**
-      @brief 初始化GM60 条形码扫描
+      @brief 初始化GM65 条形码扫描
     */
     void init();
 
@@ -75,32 +75,32 @@ class GM60_scanner {
 
 
     /**
-       @brief 设置GM60的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
+       @brief 设置GM65的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
        静音模式，1-开启，0-关闭。
     */
     void set_silent_mode(uint8_t silent_mode);// bit 6
 
     /**
-       @brief 设置GM60的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
+       @brief 设置GM65的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
        LED指示灯模式，扫描成功，蓝色LED灯闪烁。1-开启，0-关闭。
     */
     void set_LED_mode(uint8_t LED_mode);// bit 7
 
     /**
-       @brief 设置GM60的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
-       GM60工作模式，0-手动模式，1-命令触发模式，2-连续模式，3-感应模式
+       @brief 设置GM65的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
+       GM65工作模式，0-手动模式，1-命令触发模式，2-连续模式，3-感应模式
     */
     void set_working_mode(uint8_t working_mode); //bit0-1
     
     /**
-       @brief 设置GM60的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
+       @brief 设置GM65的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
        灯光模式，0-无照明，1-普通，2/3-常亮
     */
     void set_light_mode(uint8_t light_mode); //bit2-3
 
 
     /**
-       @brief 设置GM60的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
+       @brief 设置GM65的各种模式，工作模式，灯光模式，瞄准模式，指示灯模式。
        瞄准模式，0-无瞄准，1-普通，2/3-常亮
     */
     void set_aim_mode(uint8_t aim_mode); //bit4-5

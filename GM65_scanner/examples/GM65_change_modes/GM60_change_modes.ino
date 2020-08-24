@@ -1,8 +1,8 @@
 #include <SoftwareSerial.h>
-#include "GM60_scanner.h"
+#include "GM65_scanner.h"
 SoftwareSerial mySerial(10, 11); // RX, TX
 
-GM60_scanner scanner(&mySerial);
+GM65_scanner scanner(&mySerial);
 int arr[10];
 int cont = 0;
 const char test[9] = {0x7E, 0x00, 0x07, 0x01, 0x00, 0x00, 0x01, 0xAB, 0xCD};

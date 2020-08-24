@@ -1,8 +1,8 @@
-#include <SoftwareSerial.h>
-#include "GM60_scanner.h"
+S#include <SoftwareSerial.h>
+#include "GM65_scanner.h"
 SoftwareSerial mySerial(10, 11); // RX, TX
 
-GM60_scanner scanner(&mySerial);
+GM65_scanner scanner(&mySerial);
 int buttonPin = 4;
 
 void setup() {
