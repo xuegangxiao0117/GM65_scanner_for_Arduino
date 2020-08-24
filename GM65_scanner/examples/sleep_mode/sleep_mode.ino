@@ -27,10 +27,10 @@ void setup() {
 
 void loop() {
 
-
-  if (mySerial.available() > 0) {
-    while (mySerial.available()) {
-      Serial.write(mySerial.read());
-    }
+  String str = "";
+  str = scanner.get_info();
+  if (str.length() > 0) {
+    Serial.println(str);
   }
+  
 }

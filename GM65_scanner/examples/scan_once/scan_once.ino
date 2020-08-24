@@ -29,9 +29,5 @@ void loop() {
       scanner.scan_once();
     }
 
-//  if (mySerial.available() > 0) {
-//    while (mySerial.available()) {
-//      Serial.write(mySerial.read());
-//    }
-//  }
+
 }
